@@ -1,1 +1,1 @@
-three.js 基础api的使用和心得总结。
+three.js 基础api的基础使用和骚操作。
