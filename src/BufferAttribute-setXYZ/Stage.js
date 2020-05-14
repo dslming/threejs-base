@@ -38,7 +38,7 @@ export default class Stage {
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.renderer.setSize(vW, vH, false);
     this.containerEle.appendChild(this.renderer.domElement);
-    this.camera = new THREE.PerspectiveCamera(45, 1, 0.01, 1000)
+    this.camera = new THREE.PerspectiveCamera(45, 1, 0.01, 100000)
 
     this.camera.lookAt(0, 0, 0)
     this.camera.name = "camera";

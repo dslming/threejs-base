@@ -1,9 +1,10 @@
 export default class Floor {
-  constructor(scene) {
-    this.addFloor(scene)
+  constructor(stage) {
+    this.scene = stage.scene
+    this.addFloor()
   }
 
-  addFloor(scene) {
+  addFloor() {
     // floor
     var floorGeometry = new THREE.PlaneBufferGeometry(2000, 2000, 100, 100);
     floorGeometry.rotateX(- Math.PI / 2);
@@ -28,6 +29,6 @@ export default class Floor {
     floorGeometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
     var floorMaterial = new THREE.MeshBasicMaterial({ vertexColors: THREE.VertexColors });
     var floor = new THREE.Mesh(floorGeometry, floorMaterial);
-    scene.add(floor);
+    this.scene.add(floor);
   }
 }
