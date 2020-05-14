@@ -25,6 +25,7 @@ export default class Floor {
     }
 
     // 确保每个面都有唯一的顶点
+    // toNonIndexed: 将索引坐标点转为三角面使用的顶点
     floorGeometry = floorGeometry.toNonIndexed();
     position = floorGeometry.attributes.position;
     // 6个点的, 2个三角面
